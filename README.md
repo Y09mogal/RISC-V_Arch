@@ -93,9 +93,11 @@ A significant concept used in most computer science and digital systems is th
 
 <br />
 
+![Screenshot from 2023-08-21 02-07-00](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/b145dc60-e1a4-40e1-9be5-0dc914f5b613)
 
 <br />
 
+![img](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/43dc44b5-a1d4-44d4-81a5-fcafafd978e3)
 
 <br />
 
@@ -129,18 +131,23 @@ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o 1ton.o 1ton.c
 
 <br />
 
+![Screenshot from 2023-08-20 13-11-21](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/2d1d1300-d055-4bd7-b5f5-414a5cdc94cf)
 
 <br />
 
+![Screenshot from 2023-08-21 01-54-09](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/43e2ecd5-4496-4748-8cf3-6c8a66a4c33d)
 
 <br />
 
+![Screenshot from 2023-08-20 18-52-52](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/340a47d5-4a72-41ba-ab17-4779ce1c012e)
 
 <br />
 
+![Screenshot from 2023-08-20 19-06-26](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/b36a1cde-6d28-4c29-b12b-de864dce2182)
 
 <br />
 
+![Screenshot from 2023-08-20 19-08-21](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/9877d586-574e-4daa-8902-63f70a479e5c)
 
 <br />
 
@@ -190,6 +197,7 @@ reg 0 a1
 
 <br />
 
+![Screenshot from 2023-08-21 01-50-52](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/28ea2f69-33f9-4294-b374-313e6e2360a5)
 
 <br />
 
@@ -273,10 +281,20 @@ An instantaneous offset or offset depending on a register is added or subtracted
 
 <br />
 
+![Screenshot from 2023-08-21 02-46-42](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/559ab795-e535-4bd9-9c83-07d13843b8e5)
+
+<br />
+
+![Screenshot from 2023-08-21 02-46-13](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/d9eae506-a822-4982-b7b2-fb71a6d0d890)
+
+
+<br />
+
 Below is the custom file: 
 
 <br />
 
+![Screenshot from 2023-08-21 02-48-36](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/2c7239d0-839c-4caf-87df-033dd44cdc88)
 
 
 <br />
@@ -285,6 +303,7 @@ Below is the objdump:
 
 <br />
 
+![Screenshot from 2023-08-21 02-51-35](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/ae3376ff-6b5d-4314-9b8e-68962c0b1e08)
 
 <br />
 
@@ -292,15 +311,8 @@ Below is using spike command:
 
 <br />
 
+![Screenshot from 2023-08-21 02-54-06](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/8a3cdfe7-2535-4dd2-81fa-622445bd77ba)
 
-
-<br />
-
-
-
-<br />
-
-Below is another method command:
 
 <br />
 
