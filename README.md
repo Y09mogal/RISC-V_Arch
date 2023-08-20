@@ -56,7 +56,26 @@ source .bashrc
 </details>
 
 ## Day-1
+<details>
+<summary> Introduction to RISC-V ISA </summary>
 
+
+
+</details>
+
+<details>
+<summary> Integer number representation </summary>
+
+
+
+</details>
+
+<details>
+<summary> RISCV gcc compilation and assembly code </summary>
+
+
+
+</details>
 
 ## Day-2
 
@@ -69,4 +88,7 @@ source .bashrc
 * Kunal Ghosh, CEO and Co-founder, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
 
 ## References
-* [ https://en.wikipedia.org/wiki/Logic_synthesis](https://github.com/kunalg123/riscv_workshop_collaterals)https://github.com/kunalg123/riscv_workshop_collaterals
+* https://github.com/kunalg123/riscv_workshop_collaterals)https://github.com/kunalg123/riscv_workshop_collaterals
+* https://en.wikipedia.org/wiki/Toolchain
+* https://en.wikipedia.org/wiki/GNU_toolchain
+* https://www.vsdiat.com
