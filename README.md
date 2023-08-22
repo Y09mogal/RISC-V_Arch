@@ -1459,6 +1459,46 @@ Many RISC architectures, notably RISC-V, use these as the primary instruction ty
 ## Day-5
 
 <details>
+	
+<summary>Pipeline Hazards</summary>
+
+<br />
+  
+**Control Flow Hazards:**
+Control flow hazards occur when the execution of instructions is affected by changes in the program's control flow, such as branches or jumps. These hazards can lead to incorrect instruction execution and can slow down the pipeline. There are three main types of control flow hazards:
+
+- Branch Hazards: These occur when a pipeline encounters a branch instruction that changes the program counter (PC) before the previous instructions have completed their execution. This can lead to wasted work if the pipeline has already started executing instructions following the branch that will not be needed.
+
+- Control Hazards: Control hazards refer to situations where the pipeline has to stall or insert "bubble" stages in order to resolve the branch instruction. This happens when the outcome of a branch is not yet known, and subsequent instructions that depend on the branch outcome cannot proceed until the branch is resolved.
+
+- Jump Hazards: Similar to branch hazards, jump hazards occur when a jump instruction changes the program counter before instructions following the jump have completed. This can also lead to wasted work and inefficient pipeline utilization.
+
+<br />
+
+**Read-After-Write (RAW) Hazards:**
+Read-after-write hazards occur when an instruction depends on the result of a previous instruction that writes to a register or memory location. These hazards can lead to incorrect results if not handled properly. There are three possible scenarios in RAW hazards:
+
+- True Dependency (RAW): An instruction depends on the result of a previous instruction that writes to the same location. For example, if instruction B reads a value produced by instruction A, and instruction A has not yet completed execution, a hazard exists.
+
+- Anti-Dependency (WAR): An instruction depends on a value that a subsequent instruction is going to write. For example, if instruction A writes to a register and then instruction B reads from the same register, instruction B might read the wrong value if it's executed before A's write.
+
+- Output Dependency (WAW): Two instructions are trying to write to the same location, and the order of their execution affects the final result. This can lead to incorrect results if not properly managed.
+
+<br />
+
+**Waterfall Diagram depicting the same:**
+
+<br />
+
+![d5-hazards_waterfall_diagram](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/0aa49a45-661d-4f63-b754-1d87f0bf79e4)
+
+<br />
+
+</details>
+
+
+
+<details>
 
 <summary>CPU Pipelining</summary>
 
