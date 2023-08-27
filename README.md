@@ -2011,6 +2011,199 @@ Code for the same is given below:
 
 <details>
 
+<summary>Labs :</summary>
+
+<br />
+
+**Lab-1:3-Cycle Valid Signal:**
+
+<br />
+
+![3cyclevalid](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/2e44711e-07b1-4a53-a360-8b1e461cadcc)
+
+<br />
+
+![3cyclevalid1](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/bf8a5d39-6fbc-4674-a99b-650aa39ce5ab)
+
+<br />
+
+**Lab-2:3-Cycle RISC-V**
+
+<br />
+
+![3cycleriscv](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/57ef634c-7963-4c04-bc96-2428c194d3da)
+
+<br />
+
+![3cycleriscv1](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/fc0a0b68-a9c1-4137-ba77-8f56583d3bdc)
+
+<br />
+
+**Lab-3:3-Cycle RISC-V Distribute Logic**
+
+<br />
+
+![riscvcarry3](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/e87bfb9d-9d88-447b-b11f-f41f986e1175)
+
+<br />
+
+![Screenshot from 2023-08-27 23-52-43](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/9eab7c9d-d293-4a29-a199-ff6810ad1e62)
+
+<br />
+
+**Lab-4:Register File Bypass To Address Rd-After-Wr Hazard**
+
+<br />
+
+![ph1](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/a6dc297e-9d48-4f21-af8c-718fd5916509)
+
+<br />
+
+![Screenshot from 2023-08-27 23-58-38](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/726a5414-015a-405a-ac1e-c6393f243f5b)
+
+<br />
+
+**Lab-5:Branches To Correct The Branch Target Path**
+
+<br />
+
+![ph2](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/7fccb954-afe2-4c53-9b6c-4a778ade06f7)
+
+<br />
+
+```bash
+step-1
+
+$valid = !(>>1$valid_taken_br || >>2$valid_taken_br);
+
+step-2
+
+$pc[31:0] = >>1$reset ? 32'b0 :
+               >>3$valid_taken_br ? >>3$br_tgt_pc : $inc_pc;
+
+```
+
+<br />
+
+**Lab-6:To Complete Instruction Decode Except Fence, Ecall, Ebreak**
+
+<br />
+
+![ph3](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/d2752d4f-904a-4682-9036-71ab3bcd6768)
+
+<br />
+
+```bash
+//branch instructions
+         $is_beq = $dec_bits ==? 11'bx_000_1100011;
+         $is_bne = $dec_bits ==? 11'bx_001_1100011;          
+         $is_blt = $dec_bits ==? 11'bx_100_1100011;
+         $is_bge = $dec_bits ==? 11'bx_101_1100011;
+         $is_bltu = $dec_bits ==? 11'bx_110_1100011;
+         $is_bgeu = $dec_bits ==? 11'bx_111_1100011;
+         //arithmetic instructions
+         $is_addi = $dec_bits ==? 11'bx_000_0010011;
+         $is_add = $dec_bits ==? 11'b0_000_0110011;
+         $is_lui   = $dec_bits ==? 11'bx_xxx_0110111;
+         $is_slti  = $dec_bits ==? 11'bx_010_0010011;
+         $is_sltiu = $dec_bits ==? 11'bx_011_0010011;
+         $is_xori  = $dec_bits ==? 11'bx_100_0010011;
+         $is_ori   = $dec_bits ==? 11'bx_110_0010011;
+         $is_andi  = $dec_bits ==? 11'bx_111_0010011;
+         $is_slli  = $dec_bits ==? 11'b0_001_0010011;
+         $is_srli  = $dec_bits ==? 11'b0_101_0010011;
+         $is_srai  = $dec_bits ==? 11'b1_101_0010011;
+         $is_sub   = $dec_bits ==? 11'b1_000_0110011;
+         $is_sll   = $dec_bits ==? 11'b0_001_0110011;
+         $is_slt   = $dec_bits ==? 11'b0_010_0110011;
+         $is_sltu  = $dec_bits ==? 11'b0_011_0110011;
+         $is_xor   = $dec_bits ==? 11'b0_100_0110011;
+         $is_srl   = $dec_bits ==? 11'b0_101_0110011;
+         $is_sra   = $dec_bits ==? 11'b1_101_0110011;
+         $is_or    = $dec_bits ==? 11'b0_110_0110011;
+         $is_and   = $dec_bits ==? 11'b0_111_0110011;
+         //load instructions
+         $is_load  = $dec_bits ==? 11'bx_xxx_0000011;
+        //Store instructions
+         $is_sb    = $dec_bits ==? 11'bx_000_0100011;
+         $is_sh    = $dec_bits ==? 11'bx_001_0100011;
+         $is_sw    = $dec_bits ==? 11'bx_010_0100011;
+         //jump instructions
+         $is_auipc = $dec_bits ==? 11'bx_xxx_0010111;
+         $is_jal   = $dec_bits ==? 11'bx_xxx_1101111;
+         $is_jalr  = $dec_bits ==? 11'bx_000_1100111;
+         
+         $is_jump = $is_jal || $is_jalr;
+```
+
+<br />
+
+**Lab-7:To Code Complete ALU**
+
+<br />
+
+![ph4](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/8942a0cf-3625-4715-a3ae-e7bfbd869204)
+
+<br />
+
+```bash
+//ALU
+         $result[31:0] = $is_addi  ? $src1_value +  $imm :
+                         $is_add   ? $src1_value +  $src2_value :
+                         $is_andi  ? $src1_value &  $imm :
+                         $is_ori   ? $src1_value |  $imm :
+                         $is_xori  ? $src1_value ^  $imm :
+                         $is_slli  ? $src1_value << $imm[5:0]:
+                         $is_srli  ? $src1_value >> $imm[5:0]:
+                         $is_and   ? $src1_value &  $src2_value:
+                         $is_or    ? $src1_value |  $src2_value:
+                         $is_xor   ? $src1_value ^  $src2_value:
+                         $is_sub   ? $src1_value -  $src2_value:
+                         $is_sll   ? $src1_value << $src2_value:
+                         $is_srl   ? $src1_value >> $src2_value:
+                         $is_sltu  ? $sltu_rslt[31:0]:
+                         $is_sltiu ? $sltiu_rslt[31:0]:
+                         $is_lui   ? {$imm[31:12], 12'b0}:
+                         $is_auipc ? $pc + $imm:
+                         $is_jal   ? $pc + 4:
+                         $is_jalr  ? $pc + 4:
+                         $is_srai  ? ({ {32{$src1_value[31]}} , $src1_value} >> $imm[4:0]) :
+                         $is_slt   ? (($src1_value[31] == $src2_value[31]) ? $sltu_rslt : {31'b0, $src1_value[31]}):
+                         $is_slti  ? (($src1_value[31] == $imm[31]) ? $sltiu_rslt : {31'b0, $src1_value[31]}) :
+                         $is_sra   ? ({ {32{$src1_value[31]}}, $src1_value} >> $src2_value[4:0]) :
+                         $is_load  ? $src1_value +  $imm :
+                         $is_s_instr ? $src1_value + $imm :
+                                    32'bx;
+         
+         $sltu_rslt[31:0]  = $src1_value <  $src2_value;
+         $sltiu_rslt[31:0] = $src1_value <  $imm;
+
+
+```
+
+<br />
+
+**Lab-8:LOAD**
+
+<br />
+
+![load](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/0e5ab2ce-56d7-4eec-8b30-bdb15eaa9a7c)
+
+<br />
+
+**Lab-9:LOAD/STORE**
+
+<br />
+
+![loadstore](https://github.com/Y09mogal/RISC-V_Arch/assets/79003694/93cd808a-ddac-4820-94c8-ae827a3c597a)
+
+<br />
+
+
+</details>
+
+<details>
+
 <summary>Final CPU</summary>
 
 <br />
